@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'img/PATITASFELICES.jpg'%}" />
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'css/estilos.css'%}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <br><br>
+    <main role="main" class="container">
+        <div class="container-fluir"><!--construir carrusel-->
+            <div id="carousel1" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel1" data-slide-to="1"></li>
+                    <li data-target="#carousel1" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" style="border-radius: 60px;"><!--configuramos nuestras fotos-->
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{% static 'img/caru1.jpg'%}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'img/caru2.jpg'%}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'img/caru3.jpg'%}" alt="">
+                    </div><!--carusel inner-->
+                    <a class="carousel-control-prev" href="#carousel1" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel1" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">next</span>
+                    </a>
+                </div><!--fin carusel-->
+            </div>
+        </div>
+        <br><br><br>
+        <div class="row jumbotron" id="qSomos">
+            <div class="col-lg-6">
+                <div>
+                    <h1>Patitas Felices</h1><br>
+                    <h2 class="lead"><strong>Quiénes somos</strong></h2>
+                    <p>
+                        
+En PatitasFelices, ofrecemos alimentos y accesorios de calidad para tus mascotas. <br><br>
+
+Nos importa su bienestar y salud, por lo que brindamos opciones de alimentación adecuadas para cada mascota. Nuestra tienda en línea te permite encontrar productos confiables y comprar desde la comodidad de tu hogar. <br><br>
+
+Estamos comprometidos con brindarte el mejor servicio y asesoramiento personalizado.<strong> ¡Cuida de tus mascotas con PatitasFelices!</strong><br>
+
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'img/PATITASFELICES.jpg' %}" alt="Quiénes Somos" class="img-fluid">
+            </div>
+        </div>
+        <hr><br>
+        <div>
+            <h3 class="lead" style="color: #596272"><strong>Productos destacados</strong></h3><br>
+            <div class="row">
+
+                <div class="col-md">
+                    <div class="card text-center">
+                        <img class="card-img-top mx-auto" src="{% static 'img/pet1.jpg' %}">
+                        <div class="card-body">
+                            <h4 class="card-title">Juguete</h4>
+                            <p class="card-text">Última publicación: 20/09/20 <br><i class="fa fa-eye"></i> 5.354 </p>
+                            <a href="{% url 'Productos'%}" class="btn btn-primary col-12">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card text-center">
+                        <img class="card-img-top mx-auto" src="{% static 'img/pet3.jpg' %}">
+                        <div class="card-body">
+                            <h4 class="card-title">Collar</h4>
+                            <p class="card-text">Última publicación: 19/09/20 <br><i class="fa fa-eye"></i> 6.117 </p>
+                            <a href="{% url 'Productos'%}" class="btn btn-primary col-12">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card text-center">
+                        <img class="card-img-top mx-auto" src="{% static 'img/pet5.jpg' %}">
+                        <div class="card-body">
+                            <h4 class="card-title">Comida</h4>
+                            <p class="card-text">Última publicación: 21/09/20 <br><i class="fa fa-eye"></i> 3.970 </p>
+                            <a href="{% url 'Productos'%}" class="btn btn-primary col-12">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <hr><br>
+        <div class="row jumbotron" id="qSomos">
+            <div class="col-lg-5">
+                <img src="{% static 'img/hero-photo.jpg' %}" alt="Quiénes Somos" class="img-fluid">
+            </div>
+            <div class="col-lg-1"></div>
+            <form action="index.html" method="post" name="datos" class="col-lg-6 newsletter"
+                onsubmit="return validacion()" id="newsletter">
+                <div class=" mb-4">
+                    <h2 class="h2 mb-2 font-weight-normal"><strong>Patitas Felices</strong></h2>
+                    <p>Suscríbete a nuestro newsletter y no pares de recibir todas las novedades en tu correo.</p>
+                    <div class="form-label-group">
+                        <input type="text" name="nombre" id="nom" placeholder="Nombre" class="form-control">
+                        <label for="nom"></label>
+                    </div>
+
+                    <div class="form-label-group">
+                        <input type="text" name="email" id="ema" placeholder="Email" class="form-control">
+                        <label for="ema"></label>
+                    </div>
+
+                    <div class="">
+                        <input id="btnNewsletter" class="btn btn-lg btn-primary btn-block" type="submit"
+                            value="¡Quiero suscribirme!">
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </main><br>
+    </main>
+    <br><br>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
+{% endblock %}

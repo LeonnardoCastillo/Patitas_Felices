@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organización</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'img/PATITASFELICES.jpg'%}" />
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'css/estilos.css'%}" rel="stylesheet">
+</head>
+<body>
+    <br><br>
+    <main role="main" class="container">    
+        <br><br><br>
+        <div class="row jumbotron" id="qSomos">
+            <div class="col-lg-6">
+                <div>
+                    <h1>Misión</h1><br>
+                    <h2 class="lead"><strong></strong></h2>
+                    <p>
+                        En PatitasFelices, nuestra misión es proporcionar a los dueños de mascotas una experiencia de compra conveniente y confiable, ofreciendo alimentos y accesorios de alta calidad que cumplan con los estándares más exigentes. Nos preocupamos por la salud y el bienestar de las mascotas, por lo que nos comprometemos a brindar opciones de alimentación equilibradas y opciones de productos que promuevan una vida saludable y activa.
+
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'img/misi.png' %}" alt="" class="img-fluid">
+            </div>
+        </div>
+        <hr><br>
+        <div class="row jumbotron" id="qSomos">
+            <div class="col-lg-6">
+                <div>
+                    <h1>Visión</h1><br>
+                    <h2 class="lead"><strong></strong></h2>
+                    <p>
+                        Nuestra visión en PatitasFelices es convertirnos en la tienda en línea líder en alimentos y accesorios para mascotas, reconocida por brindar productos de alta calidad y promover el bienestar de los animales. Nos esforzamos por ser la opción preferida de los dueños de mascotas al proporcionarles opciones nutritivas y seguras para sus compañeros peludos.
+
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'img/visi.png' %}" alt="" class="img-fluid">
+            </div>
+        </div>
+        <br><br>
+        <div class="row jumbotron" id="qSomos">
+            <div class="col-lg-6">
+                <div>
+                    <h1>Objetivo</h1><br>
+                    <h2 class="lead"><strong></strong></h2>
+                    <p>
+                        Nuestro objetivo principal es cuidar de la salud y el bienestar de las mascotas, ofreciendo una amplia variedad de alimentos y marcas confiables que se adapten a las necesidades individuales de cada mascota. Nos esforzamos por educar a los dueños de mascotas sobre la importancia de una nutrición adecuada y proporcionarles opciones que promuevan una vida larga y feliz para sus adorables compañeros peludos. Además, buscamos destinar un porcentaje significativo de nuestras ventas a causas benéficas relacionadas con la protección y el cuidado de los animales, para marcar una diferencia positiva en la comunidad. Queremos ser reconocidos como una empresa comprometida con el bienestar animal y generar confianza y transparencia en nuestras acciones.
+
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'img/objetivo.png' %}" alt="" class="img-fluid">
+            </div>
+        </div>
+        <br><br>
+        
+        <br><br>
+            <!--video-->
+      <div class="youbepop">
+
+        <div class="-Yovideoutbe">
+        <iframe width="560px" height="315"  src="https://www.youtube.com/embed/LvNkTsqGoYQ" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    </main>
+    <br><br>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
+{% endblock %}
